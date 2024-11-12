@@ -30,30 +30,6 @@
                 </div>
             </div>
             <div class="ecl-site-footer__column">
-{{--                <div class="ecl-site-footer__section">--}}
-{{--                    <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">--}}
-{{--                        About us </h2>--}}
-{{--                    <ul class="ecl-site-footer__list">--}}
-{{--                        <li class="ecl-site-footer__list-item">--}}
-{{--                            <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202401689"--}}
-{{--                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"--}}
-{{--                               aria-label="Digital Services Act Regulation">AI Act Regulation</a></li>--}}
-
-{{--                        <li class="ecl-site-footer__list-item">--}}
-{{--                            <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"--}}
-{{--                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"--}}
-{{--                               aria-label="Learn more about the DSA">Learn more about the AI Act</a></li>--}}
-
-{{--                        <li class="ecl-site-footer__list-item">--}}
-{{--                            <a href="https://digital-strategy.ec.europa.eu/en/faqs/dsa-transparency-database-questions-and-answers"--}}
-{{--                               class="ecl-link ecl-link--standalone ecl-link--inverted ecl-site-footer__link"--}}
-{{--                               aria-label="Faq">Faq</a></li>--}}
-
-
-
-
-{{--                    </ul>--}}
-{{--                </div>--}}
                 <div class="ecl-site-footer__section">
                     <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">
                         Policies </h2>

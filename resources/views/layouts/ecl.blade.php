@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>@yield('title', 'Home') - High-Risk AI Database</title>
+    <title>@yield('title', 'Home') - {{ config('app.name') }}</title>
 
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
