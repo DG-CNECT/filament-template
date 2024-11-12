@@ -1,0 +1,42 @@
+models:
+  AuthorisedRepresentative:
+    name: string
+    address: string
+    contact_details: string
+    timestamps: true
+    relationships:
+      hasMany: Provider
+
+  Provider:
+    name: string
+    address: string
+    contact_details: string
+    authorised_representative_id: id # Foreign key
+    timestamps: true
+    relationships:
+      hasMany: AISystem
+      belongsTo: AuthorisedRepresentative
+
+  AISystem:
+    provider_id: id # Foreign key
+    authorised_representative_id: id foreign nullable # Foreign key nullable
+    trade_name: string
+    reference: string
+    intended_purpose: text
+    components_and_functions: text # Many to many later ?
+    status: enum:on_market,in_service,out_of_service,recalled
+    information_used: text
+    operating_logic: text
+    timestamps: true
+    relationships:
+      belongsToMany: MemberState
+
+  MemberState:
+    iso_code: string unique
+    name: string
+    timestamps: true
+    relationships:
+      belongsToMany: AISystem
+
+
+seeders: MemberState, AuthorisedRepresentative, Provider, AISystem

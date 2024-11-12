@@ -1,0 +1,24 @@
+created:
+    - database/factories/AuthorisedRepresentativeFactory.php
+    - database/factories/ProviderFactory.php
+    - database/factories/AISystemFactory.php
+    - database/factories/MemberStateFactory.php
+    - database/migrations/2024_08_16_094207_create_authorised_representatives_table.php
+    - database/migrations/2024_08_16_094208_create_providers_table.php
+    - database/migrations/2024_08_16_094209_create_a_i_systems_table.php
+    - database/migrations/2024_08_16_094210_create_member_states_table.php
+    - database/migrations/2024_08_16_094211_create_a_i_system_member_state_table.php
+    - app/Models/AuthorisedRepresentative.php
+    - app/Models/Provider.php
+    - app/Models/AISystem.php
+    - app/Models/MemberState.php
+    - database/seeders/MemberStateSeeder.php
+    - database/seeders/AuthorisedRepresentativeSeeder.php
+    - database/seeders/ProviderSeeder.php
+    - database/seeders/AISystemSeeder.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string nullable' }
+    AuthorisedRepresentative: { name: string, address: string, contact_details: string, timestamps: timestamps, relationships: { hasMany: Provider } }
+    Provider: { name: string, address: string, contact_details: string, authorised_representative_id: id, timestamps: timestamps, relationships: { hasMany: AISystem, belongsTo: AuthorisedRepresentative } }
+    AISystem: { provider_id: id, authorised_representative_id: 'id foreign nullable', trade_name: string, reference: string, intended_purpose: text, components_and_functions: text, status: 'enum:on_market,in_service,out_of_service,recalled', information_used: text, operating_logic: text, timestamps: timestamps, relationships: { belongsToMany: MemberState } }
+    MemberState: { iso_code: 'string unique', name: string, timestamps: timestamps, relationships: { belongsToMany: AISystem } }
